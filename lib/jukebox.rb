@@ -45,12 +45,12 @@ end
 def run(songs)
   # help
 
-  choice = gets.chomp
-  choice = choice.downcase
+  choice = ""
+  
   while choice
     puts "Please enter a command:"
-    input = gets.downcase.strip
-    case input
+    i = gets.chomp
+    case i
     when 'list'
       list(songs)
     when 'play'
@@ -61,8 +61,7 @@ def run(songs)
     when 'exit'
       exit_jukebox
       break
-    else
-      help
+    
     end
   end
 end
